@@ -1,0 +1,19 @@
+// import des styles utilitaires
+@import "utils/mixins";
+@import "utils/functions";
+@import "utils/variables";
+
+//import des styles de bases
+@import "base/base";
+@import "base/reset";
+
+// import des styles mises en page
+@import "layout/header";
+@import "layout/navigation";
+@import "layout/grids";
+@import "layout/footer";
+
+// import des styles de composants
+@import "components/typography";
+@import "components/button";
+@import "components/decorations";
