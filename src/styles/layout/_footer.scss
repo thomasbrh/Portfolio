@@ -1,0 +1,11 @@
+footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: $color-white;
+    
+    a {
+        color: $color-white;
+        text-decoration: none;
+    }
+}

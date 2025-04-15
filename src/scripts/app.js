@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 /* Barre de progression */
-/* window.onscroll = function() {
+window.onscroll = function() {
     updateProgressBar();
 };
 
@@ -23,4 +23,4 @@ function updateProgressBar() {
     if (progressBar) {
         progressBar.style.width = progress + "%";
     }
-} */
+}

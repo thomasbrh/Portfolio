@@ -5,20 +5,22 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title-header,
 .title-header-thin,
-.title-big, 
+.title-big,
+.title-big-thin,
 .title-medium, 
 .title-small,
-.title-section
+.title-section,
 .title-footer {
-    color: $color-primary;
+    color: $color-white;
     font-family: $font-primary;
     line-height: 1.2;
 }
 
-.title-header { @include font-size-responsive(122px, 137px, 159px); color: $color-white; }
+.title-header { @include font-size-responsive(216px, 137px, 159px); color: $color-white; }
 .title-header-thin { font-weight: 100; }
 
 .title-big { @include font-size-responsive(81px, 91px, 106px); color: $color-primary; }
+.title-big-thin { font-weight: 100; color: $color-white; }
 
 .title-medium { @include font-size-responsive(54px, 61px, 71px); }
 
@@ -27,6 +29,6 @@ h1, h2, h3, h4, h5, h6, p {
 .title-small { @include font-size-responsive(24px, 27px, 32px); }
 
 .paragraph {
-    @include paragrpah ($color-black);
+    @include paragrpah ($color-white);
     @include font-size-responsive(16px, 18px, 21px); /* 1.5 ratio */
 }

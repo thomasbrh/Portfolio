@@ -2,7 +2,7 @@
 <html lang="fr">
     <!-- L'IA a été utilisé pour le form et le changement de "Page" -->
     <head>
-        <title>Framework</title>
+        <title>Thomas Bruch - Portfolio</title>
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,7 +17,7 @@
         <meta property="og:image:width" content="1800">
         <meta property="og:image:height" content="945">
         <!-- link -->
-        <link rel="icon" type="image/x-icon" href="assets/images/Logo.svg">
+        <link rel="icon" type="image/x-icon" href="assets/images/PDP.jpg">
         <link rel="stylesheet" href="styles/app.css">
         <!-- script -->
         <script src="scripts/app.js" defer></script>
@@ -33,10 +33,12 @@
 
         <!-- navigation -->
         <nav id="navigation">
+            <a href="index.html">Accueil</a>
+            <a href="index.html">Projets</a>
         </nav>
 
         <!-- header -->
-        <header id="header">
+        <header class="grid" id="header">
             <div class="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -56,21 +58,70 @@
                 </div>
             </div>
 
-            <h1 class="title-header">Thomas<br> 
-            <span class="title-header-thin">Bruch</span>
-            <span class="title-big">.</span>
+            <ul class="socials">
+                <li>
+                    <a href="https://www.linkedin.com/in/thomas-bruch-a21055357/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                            <path fill="#fff" d="M35.6 5.6a3.8 3.8 0 0 1 3.8 3.8v26.2a3.8 3.8 0 0 1-3.8 3.8H9.4a3.8 3.8 0 0 1-3.8-3.8V9.4a3.8 3.8 0 0 1 3.8-3.8h26.2zM34.7 34.7V24.75a6.2 6.2 0 0 0-11.1-3.7v-2.05h-5.2v15.7h5.2v-9.2a2.6 2.6 0 0 1 5.2 0v9.2h5.2zM12.9 16.05a3.15 3.15 0 1 0 0-6.3 3.15 3.15 0 0 0 0 6.3zM15.5 34.7V19H10.3v15.7h5.2z"/>
+                        </svg>
+                    </a>
+                </li>
+                
+                <li>
+                    <a href="https://m.facebook.com/toto150022/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                            <path fill="#fff" d="M41.25 22.5c0-10.35-8.4-18.75-18.75-18.75S3.75 12.15 3.75 22.5c0 9.1 6.45 16.66 15 18.38V28.13H15v-5.63h3.75v-4.69a6.56 6.56 0 0 1 6.56-6.56H30v5.63h-3.75a1.88 1.88 0 0 0-1.88 1.87v3.75H30v5.63h-5.63v13.03c9.47-.94 16.88-8.93 16.88-18.75z"/>
+                        </svg>
+                    </a>
+                </li>
+
+                <li>
+                    <a href="https://www.instagram.com/thomas_brh/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45">
+                            <path fill="#fff" d="M14.6 3.75h15.8a11.6 11.6 0 0 1 11.6 11.6v15.8a11.6 11.6 0 0 1-11.6 11.6H14.6a11.6 11.6 0 0 1-11.6-11.6V14.6a11.6 11.6 0 0 1 11.6-10.85zM14.25 7.5a7.75 7.75 0 0 0-6.75 6.75v16.5a7.75 7.75 0 0 0 6.75 6.75h16.5a7.75 7.75 0 0 0 6.75-6.75V14.25a7.75 7.75 0 0 0-6.75-6.75H14.25zm18.1 2.81a2.35 2.35 0 1 1 0 4.69 2.35 2.35 0 0 1 0-4.69zM22.5 13.13a9.37 9.37 0 1 1 0 18.75 9.37 9.37 0 0 1 0-18.75zm0 3.75a5.63 5.63 0 1 0 0 11.25 5.63 5.63 0 0 0 0-11.25z"/>
+                        </svg>
+                    </a>                    
+                </li>
+            </ul>
+
+            <ul class="anchor-nav">
+                <button><img src="assets/images/directional-arrow.svg" alt="flèche directionnelle orientée vers le haut"></button>
+                <li><a href="#header">Header</a></li>
+                <li><a href="#header">Hello</a></li>
+                <li><a href="#footer">Footer</a></li>
+  
+                <button><img class="img-arrow--down" src="assets/images/directional-arrow.svg" alt="flèche directionnelle orientée vers le bas"></button>
+            </ul>
+
+            <h1 class="title-header grid-start2">Thomas<br> 
+            <span class="title-header title-header-thin">Bruch</span><span class="title-big">.</span>
             </h1>
+
+            <h2 class="title-big grid-start3">Port<span class="title-big-thin">folio</span>
+            </h2>
         </header>
 
         <!-- main -->
          <!-- sections -->
-        <section>
-            
+        <section id="hello" class="grid">
+            <h3 class="title-section grid-start2 grid-end3">Hello</h3>
+
+            <p class="paragraph grid-start3 grid-end5">Je m’appelle Thomas, étudiant en 2e année en interface design et développement à la Haute École Albert Jacquard.</p>
+
+            <p class="paragraph grid-start3 grid-end5">Ce qui me plaît dans le web, c’est de pouvoir allier créativité et technique pour imaginer des interfaces à la fois belles, fonctionnelles et agréables à utiliser. J’ai le souci du détail et j’aime soigner chaque élément, du design jusqu’à l’intégration.</p>
+
+            <p class="paragraph grid-start3 grid-end5">Je suis actuellement à la recherche d’un stage en design web ou front-end, pour mettre en pratique ce que j’ai appris, progresser au contact d’une équipe et découvrir de nouveaux outils et méthodes de travail.</p>
         </section>
 
         <!-- footer -->
         <footer id="footer">
-            <!-- <a class="copy" href="http://www.thomasbruch.be"><small>© Thomas Bruch 2025</small></a>
-        </footer> -->
+            <ul>
+                <a href="">téléphone</a>
+                <a href="">Mail</a>
+                <a href="">credit</a>
+            </ul>
+
+            <a class="copy paragraph" href="http://www.thomasbruch.be"><small>© Thomas Bruch 2025</small></a>
+        </footer>
     </body>
 </html>
