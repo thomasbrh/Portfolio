@@ -1,4 +1,10 @@
 /* navigation */
+.desktop {
+    display: none;
+    @include responsive(desktop) { display: block; }
+}
+
+/* progress bar */
 #progress-bar-container {
     position: fixed;
     z-index: 1000;
@@ -48,12 +54,16 @@ nav {
 /* Anchor navigation */
 .anchor-nav {
     display: flex;
-    flex-direction: column;
     text-align: center;
     gap: 1rem;
     margin: 0;
-    right: 2rem;
-    top: 40%;
+    right: 1rem;
+
+    @include responsive(desktop) {
+        top: 40%;
+        flex-direction: column;
+        right: 2rem;
+    }
 
     li { 
         a {text-decoration: none;
@@ -92,9 +102,31 @@ nav {
 .socials {
     margin: 1rem 0;
     right: 1rem;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    bottom: 1rem;
+
+    @include responsive(desktop) {
+        display: block;
+        top: 0;
+        right: 2rem;
+        margin: 1rem 0;
+    }
 
     li {
         display: inline-block;
         margin: 0 1rem;
     }
+}
+
+/* BackToTop */
+.back-to-top {
+    position: fixed;
+    background-color: $color-white;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    bottom: 2rem;
+    left: 1rem;
 }

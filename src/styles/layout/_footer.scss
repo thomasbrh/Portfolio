@@ -1,10 +1,27 @@
 footer {
-    display: flex;
-    justify-content: center;
+    display: block;
     width: 100%;
     color: $color-white;
     
+    ul {
+        a {
+            display: flex;
+            justify-content: center;
+            font-family: $font-primary;
+            padding: 0.5rem;
+            text-transform: uppercase;
+            color: $color-white;
+            text-decoration: none;
+            border-right: 2px solid $color-white;
+        }
+        a:last-child {
+            border-right: none;
+        }
+    }
+
     a {
+        display: flex;
+        justify-content: center;
         color: $color-white;
         text-decoration: none;
     }

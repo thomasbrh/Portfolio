@@ -1,12 +1,9 @@
 /* grid */
 .grid {
     box-sizing: border-box;
-    padding: 0 1rem;
+    padding: 2rem 1rem 0 1rem;
     width: 100%;
     max-width: 100%;
-    display: grid;
-    grid-column-gap: 1rem;
-    grid-template-columns: 1fr 1fr;
 
     @include responsive(tablet) {
         padding: 0 0rem;
@@ -16,6 +13,7 @@
     }
     
     @include responsive(desktop) {
+        display: grid;
         padding: 0 2rem;
         grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
     }
