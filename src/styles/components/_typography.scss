@@ -16,21 +16,46 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.2;
 }
 
-.title-header { @include font-size-responsive(60px, 137px, 216px); color: $color-white; margin: 3rem 0 3rem 0; }
+.title-header { @include font-size-responsive(60px, 137px, 216px); 
+    color: $color-white; 
+    margin: 3rem 0 3rem 0; 
+}
 .title-header-thin { font-weight: 100; }
 
-.title-big { @include font-size-responsive(37px, 91px, 125px); color: $color-primary; margin-bottom: 2rem;}
-.title-big-thin { font-weight: 100; color: $color-white; }
+.title-big { @include font-size-responsive(37px, 91px, 125px); 
+    color: $color-primary; 
+    margin-bottom: 2rem;
+}
+.title-big-thin { 
+    font-weight: 100; 
+    color: $color-white; 
+}
 
 .title-medium { @include font-size-responsive(54px, 61px, 71px); }
 
-.title-section { @include font-size-responsive(36px, 41px, 47px); margin-bottom: 3rem; text-transform: uppercase; }
-.title-section-thin { font-weight: 100; color: $color-primary; }
-
+.title-section { @include font-size-responsive(36px, 41px, 47px); 
+    margin-bottom: 2rem; 
+    text-transform: uppercase; 
+}
+.title-section-thin { 
+    font-weight: 300; 
+    color: $color-primary; 
+}
 
 .title-small { @include font-size-responsive(24px, 27px, 32px); }
 
 .paragraph {
     @include paragrpah ($color-white);
-    @include font-size-responsive(18px, 20px, 24px); /* 1.5 ratio */
+    @include font-size-responsive(18px, 20px, 24px);
+}
+.paragraph-bold { 
+    @include font-size-responsive(20px, 24px, 28px);
+    font-weight: 600;
+}
+
+.paragraph-center {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
 }

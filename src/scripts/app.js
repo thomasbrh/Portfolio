@@ -24,3 +24,16 @@ function updateProgressBar() {
         progressBar.style.width = progress + "%";
     }
 }
+
+/* Etat actif de la barre de navigation mobile */
+document.querySelectorAll('.page').forEach(element => {
+    element.addEventListener('click', (event) => {
+        // Supprimer la classe 'page--active' de tous les éléments avec la classe 'page'
+        document.querySelectorAll('.page').forEach(el => {
+            el.classList.remove('page--active');
+        });
+
+        // Ajouter la classe 'page--active' à l'élément cliqué
+        event.currentTarget.classList.add('page--active');
+    });
+});

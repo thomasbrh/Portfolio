@@ -1,6 +1,25 @@
+.icon-social {
+    width: 40px;
+    height: 40px;
+
+    &:hover {
+        scale: 1.2;
+    }
+
+    @include responsive(desktop) {
+        width: 60px;
+        height: 60px;
+    }
+}
+
 .icon {
     width: 20px;
     height: 20px;
+
+    @include responsive(desktop) {
+        width: 30px;
+        height: 30px;
+    }
 }
 
 .img-sections {
@@ -8,6 +27,12 @@
     width: calc(100% + 2rem);
     left: -1rem;
     filter: grayscale(100%);
+
+    @include responsive(desktop) {
+        width: calc(100% + 6rem);
+        left: -2rem;
+        z-index: -1000;
+    }
 }
 
 .center {
