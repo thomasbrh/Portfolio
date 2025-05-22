@@ -125,6 +125,7 @@ nav {
     position: fixed;
     bottom: 1rem;
     gap: 0.5rem;
+    height: 40px;
 
     &:hover {
         fill: $color-primary;
@@ -135,6 +136,7 @@ nav {
         top: 0;
         right: 2rem;
         margin: 1rem 0;
+        height: 60px;
     }
 
     li {
@@ -146,6 +148,7 @@ nav {
 
 /* BackToTop */
 .back-to-top {
+    z-index: 1000;
     position: fixed;
     background-color: $color-white;
     width: 40px;

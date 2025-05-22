@@ -24,15 +24,31 @@
 
 .img-sections {
     position: relative;
+    object-fit: cover;
+    aspect-ratio: 10/10;
     width: calc(100% + 2rem);
     left: -1rem;
     filter: grayscale(100%);
+    margin-bottom: 2rem;
 
     @include responsive(desktop) {
         width: calc(100% + 6rem);
         left: -2rem;
         z-index: -1000;
+        margin-bottom: 4rem;
     }
+}
+
+.fit {
+    object-fit:fill;
+}
+
+.img-card {
+    width: 100%;
+    object-fit: cover;
+    aspect-ratio: 10/10;
+    filter: grayscale(100%);
+    margin-bottom: 1rem;
 }
 
 .center {

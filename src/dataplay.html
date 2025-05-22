@@ -13,11 +13,11 @@
         <meta property="og:description" content="Portfolio du développeur Thomas Bruch.">
         <meta property="og:type" content="website">
         <meta property="og:url" content="thomasbruch.be">
-        <meta property="og:image" content="assets/images/Logo.svg">
+        <meta property="og:image" content="assets/images/titanic.svg">
         <meta property="og:image:width" content="1800">
         <meta property="og:image:height" content="945">
         <!-- link -->
-        <link rel="icon" type="image/x-icon" href="assets/images/PDP.jpg">
+        <link rel="icon" type="image/x-icon" href="assets/images/titanic.svg">
         <link rel="stylesheet" href="styles/app.css">
         <!-- script -->
         <script src="scripts/app.js" defer></script>
@@ -25,7 +25,12 @@
         <link rel="stylesheet" href="https://use.typekit.net/fov5wdk.css">
     </head>
 
-    <body class="background"> 
+    <body class="background">
+        <!-- cursor -->
+        <div class="cursor outer"></div>
+        <div class="cursor inner"></div>
+
+
         <!-- progress bar -->
         <div id="progress-bar-container">
             <div id="progress-bar"></div>
@@ -34,7 +39,8 @@
 
         <!-- navigation mobile -->
         <nav id="navigation-mobile" class="mobile nav-mobile">
-            <a href="index.html" class="page">
+            <!-- accueil -->
+            <a href="index.html" class="page link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <defs>
                         <mask id="mask-house">
@@ -49,11 +55,11 @@
                         fill="#222"
                         mask="url(#mask-house)"
                     />
-                    </svg>
-                    
+                </svg>     
             </a>
 
-            <a href="https://www.thomasbruch.be/projets/" class="page">
+            <!-- projets -->
+            <a href="https://www.thomasbruch.be/projets/" class="page link">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="#222" d="M3 4.5h6l2 2h10.5a.5.5 0 01.5.5v12a.5.5 0 01-.5.5H3.5a.5.5 0 01-.5-.5v-14a.5.5 0 01.5-.5z" />
                 </svg>
@@ -63,37 +69,40 @@
 
         <!-- navigation desktop -->
         <nav id="navigation-desktop" class="desktop">
-            <a href="index.html">Accueil</a>
-            <a href="index.html">Projets</a>
+            <a href="index.html" class="link">Accueil</a>
+            <a href="index.html" class="link">Projets</a>
         </nav>
 
 
         <!-- navigation backToTop -->
         <a href="#header" class="back-to-top">
-            <img src="assets/images/backToTop.svg" class="icon center" alt="bouton de retour en haut de page">
+            <img src="assets/images/backToTop.svg" class="icon center link" alt="bouton de retour en haut de page">
         </a>
 
 
         <!-- navigation socials -->
         <ul class="socials">
             <li>
-                <a href="https://www.linkedin.com/in/thomas-bruch-a21055357/">
+                <!-- linkedin -->
+                <a href="https://www.linkedin.com/in/thomas-bruch-a21055357/" class="link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" class="icon-social">
                         <path fill="#fff" d="M35.6 5.6a3.8 3.8 0 0 1 3.8 3.8v26.2a3.8 3.8 0 0 1-3.8 3.8H9.4a3.8 3.8 0 0 1-3.8-3.8V9.4a3.8 3.8 0 0 1 3.8-3.8h26.2zM34.7 34.7V24.75a6.2 6.2 0 0 0-11.1-3.7v-2.05h-5.2v15.7h5.2v-9.2a2.6 2.6 0 0 1 5.2 0v9.2h5.2zM12.9 16.05a3.15 3.15 0 1 0 0-6.3 3.15 3.15 0 0 0 0 6.3zM15.5 34.7V19H10.3v15.7h5.2z"/>
                     </svg>
                 </a>
             </li>
             
+            <!-- facebook -->
             <li>
-                <a href="https://m.facebook.com/toto150022/">
+                <a href="https://m.facebook.com/toto150022/" class="link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" class="icon-social">
                         <path fill="#fff" d="M41.25 22.5c0-10.35-8.4-18.75-18.75-18.75S3.75 12.15 3.75 22.5c0 9.1 6.45 16.66 15 18.38V28.13H15v-5.63h3.75v-4.69a6.56 6.56 0 0 1 6.56-6.56H30v5.63h-3.75a1.88 1.88 0 0 0-1.88 1.87v3.75H30v5.63h-5.63v13.03c9.47-.94 16.88-8.93 16.88-18.75z"/>
                     </svg>
                 </a>
             </li>
 
+            <!-- instagram -->
             <li>
-                <a href="https://www.instagram.com/thomas_brh/">
+                <a href="https://www.instagram.com/thomas_brh/" class="link">
                     <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 45 45" class="icon-social">
                         <path fill="#fff" d="M14.6 3.75h15.8a11.6 11.6 0 0 1 11.6 11.6v15.8a11.6 11.6 0 0 1-11.6 11.6H14.6a11.6 11.6 0 0 1-11.6-11.6V14.6a11.6 11.6 0 0 1 11.6-10.85zM14.25 7.5a7.75 7.75 0 0 0-6.75 6.75v16.5a7.75 7.75 0 0 0 6.75 6.75h16.5a7.75 7.75 0 0 0 6.75-6.75V14.25a7.75 7.75 0 0 0-6.75-6.75H14.25zm18.1 2.81a2.35 2.35 0 1 1 0 4.69 2.35 2.35 0 0 1 0-4.69zM22.5 13.13a9.37 9.37 0 1 1 0 18.75 9.37 9.37 0 0 1 0-18.75zm0 3.75a5.63 5.63 0 1 0 0 11.25 5.63 5.63 0 0 0 0-11.25z"/>
                     </svg>
@@ -104,6 +113,7 @@
 
         <!-- header -->
         <header class="grid" id="header">
+            <!-- gradient background -->
             <div class="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <defs>
@@ -123,6 +133,7 @@
                 </div>
             </div>
 
+            <!-- title -->
             <h1 class="title-header grid-start2">DATAPLAY<br> 
             <span class="title-big">.</span><span class="paragraph">2025</span>
             </h1>
@@ -135,12 +146,12 @@
         <!-- main -->
         <!-- sections mise en situation -->
         <section id="section-mise-en-situation" class="grid">
-            <img src="assets/images/PDP.jpg" data-mb="2" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
+            <img src="assets/images/dataplay-presentation.webp" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
 
             <div class="grid-start3 grid-end6 paragraph-center">
-                <h3 class="title-section">Mise en situation</h3>
+                <h3 class="title-section"><span class="title-section-red">Mise</span> en situation</h3>
 
-                <p class="paragraph">Les données sont le nouvel or noir. 
+                <p class="paragraph paragraph-bold">Les données sont le nouvel or noir. 
                     <br>Les données sont à extraire coûte que coûte. 
                     <br>Nous passons notre vie à générer des données. 
                     <br>Tout où presque est devenu données, le domaine est vaste.</p>
@@ -156,10 +167,10 @@
 
         <!-- sections le point de depart -->
         <section id="point-de-depart" class="grid">
-            <img src="assets/images/PDP.jpg" data-mb="2" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
+            <img src="assets/images/titanic.svg" alt="Photos de moi de profile" class="img-sections fit grid-start1 grid-end3">
 
             <div class="grid-start3 grid-end6 paragraph-center">
-                <h3 class="title-section">Le . de départ</h3>
+                <h3 class="title-section"> <span class="title-section-red">Le .</span> de départ</h3>
     
                 <p class="paragraph">Après un brainstorming collectif et des recherches sur divers sujets, nous avons choisi le thème du Titanic. Les recherches sur le Titanic étaient donc lancée.</p>
     
@@ -172,10 +183,10 @@
 
         <!-- sections vision creatives -->
         <section id="vision-creatives" class="grid">
-            <img src="assets/images/PDP.jpg" data-mb="2" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
+            <img src="assets/images/dataplay-vision-creative.webp" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
 
             <div class="grid-start3 grid-end6 paragraph-center">
-                <h3 class="title-section">Du concept à la vision créative</h3>
+                <h3 class="title-section"> <span class="title-section-red">Du</span> concept à la <span class="title-section-thin">vision creative</span></h3>
     
                 <p class="paragraph">“Et si on devait acheter notre ticket pour embarquer sur le Titanic… puis découvrir notre probabilité de survie comme si on y était vraiment ?” “Ahh ouais, trop bonne idée !”</p>
     
@@ -188,7 +199,7 @@
 
         <!-- sections Développement du site -->
         <section id="vision-creatives" class="grid">
-            <img src="assets/images/PDP.jpg" data-mb="2" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
+            <img src="assets/images/dataplay-dev.webp" alt="Photos de moi de profile" class="img-sections grid-start1 grid-end3">
 
             <div class="grid-start3 grid-end6 paragraph-center">
                 <h3 class="title-section">Développement du site</h3>
@@ -215,12 +226,12 @@
         <!-- footer -->
         <footer id="footer" class="grid">
             <ul>
-                <a callto="+32 472 38 14 78">téléphone</a>
-                <a mailto="bruchthomas@outlook.fr">Mail</a>
-                <a href="">credit</a>
+                <a callto="+32 472 38 14 78" class="link">téléphone</a>
+                <a mailto="bruchthomas@outlook.fr" class="link">Mail</a>
+                <a href="credits.html" class="link">credit</a>
             </ul>
 
-            <a class="copy" data-mb="6" href="http://www.thomasbruch.be"><small>© Thomas Bruch 2025</small></a>
+            <a class="copy link" href="http://www.thomasbruch.be"><small>© Thomas Bruch 2025</small></a>
         </footer>
     </body>
 </html>

@@ -10,6 +10,7 @@ h1, h2, h3, h4, h5, h6, p {
 .title-medium, 
 .title-small,
 .title-section,
+.title-card,
 .title-footer {
     color: $color-white;
     font-family: $font-primary;
@@ -18,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title-header { @include font-size-responsive(60px, 137px, 216px); 
     color: $color-white; 
-    margin: 3rem 0 3rem 0; 
+    margin: 2rem 0 3rem 0; 
 }
 .title-header-thin { font-weight: 100; }
 
@@ -37,9 +38,27 @@ h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 2rem; 
     text-transform: uppercase; 
 }
+.title-section-red { 
+    color: $color-primary; 
+}
 .title-section-thin { 
     font-weight: 300; 
     color: $color-primary; 
+}
+
+.title-card { @include font-size-responsive(28px, 24px, 48px); 
+    margin-bottom: 1rem; 
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.text-card {
+    @include font-size-responsive(14px, 18px, 24px);
+    font-family: $font-primary; 
+    color: $color-white;
+}
+.text-card-thin { 
+    font-weight: 100;
 }
 
 .title-small { @include font-size-responsive(24px, 27px, 32px); }

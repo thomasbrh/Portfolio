@@ -3,6 +3,7 @@ html {
     @include font-size-responsive(18px, 20px, 24px); // initialisation de la taille de la police pour l'unité rem
     scroll-behavior: smooth;
     overflow-x: hidden;
+    cursor: none;
 }
 
 header, body, section, footer{
@@ -10,6 +11,20 @@ header, body, section, footer{
     padding: 0;
 }
 
+header {
+    @include responsive(desktop) {
+        height: 100dvh;  
+    }
+}
+
 body {
     background-color: $color-bg;
+}
+
+section {
+    margin-bottom: 2rem;
+
+    @include responsive(desktop) {
+        margin-bottom: 8rem;
+    }
 }

@@ -2,6 +2,11 @@ footer {
     display: block;
     width: 100%;
     color: $color-white;
+    margin-bottom: 5dvh;
+
+    @include responsive (desktop) {
+        margin-bottom: 15dvh;
+    }
     
     ul {
         padding: 0;
