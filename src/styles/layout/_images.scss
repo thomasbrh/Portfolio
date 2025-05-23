@@ -57,15 +57,13 @@
     aspect-ratio: 10/10;
     filter: grayscale(100%);
     margin-bottom: 1rem;
+
+    &:hover {
+        filter: grayscale(0%);
+    }
 }
 
-.project-favori .card {
-    border: 2px solid #ff0000;
-    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
-    position: relative;
-  }
 
-  
 .center {
     position: absolute;
     top: 50%;
