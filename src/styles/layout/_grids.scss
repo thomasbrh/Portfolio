@@ -21,14 +21,12 @@
 
 .grid-case-studies {
     box-sizing: border-box;
-    padding: 2rem 1rem 0 1rem;
     width: 100%;
     max-width: 100%;
 
     @include responsive(desktop) {
         display: grid;
         grid-column-gap: 4rem;
-        padding: 0 2rem;
         grid-template-columns: 6fr 8fr 4fr;
     }
 }

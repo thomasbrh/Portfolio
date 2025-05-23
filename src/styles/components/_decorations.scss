@@ -5,31 +5,47 @@ a, button {
   
 .link {
     text-decoration: none;
-    color: $color-white;
 }
 
 .cursor {
     position: absolute;
     z-index: 10000;
-    height: 40px;
-    width: 40px;
+    height: 45px;
+    width: 45px;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
 .cursor.hover {
-    transform: translate(-50%, -50%) scale(3);
-    transition: transform 250ms ease-in-out;
+    transform: translate(-50%, -50%) scale(2);
+    transition: transform 200ms ease-in-out;
 }
-  
-.outer {
-    border: 1.5px solid $color-primary;
-}
+
 .inner {
-    background: #ffffff50;
-    transition: 250ms ease-out;
+    width: 10px;
+    height: 10px;
+    background-image: url('../assets/images/cursor.svg');
+    color: $color-primary;
+    background-size: cover;
+    background-position: center;
 }  
 .inner.hover {
     background: $color-white;
     mix-blend-mode: difference;
 }
+
+.outer {
+    border: 2px solid $color-white;
+    transition: 100ms ease-out;
+    mix-blend-mode: difference;
+}
+
+
+/* loader */
+.loader {
+    text-align: center;
+    font-size: 1.5rem;
+    padding: 2rem;
+    color: white;
+  }
+  

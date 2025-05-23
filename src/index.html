@@ -27,20 +27,21 @@
 
     <body class="background"> 
         <!-- cursor -->
-        <div class="cursor outer"></div>
         <div class="cursor inner"></div>
+        <div class="cursor outer"></div>
 
 
         <!-- progress bar -->
         <div id="progress-bar-container">
             <div id="progress-bar"></div>
         </div>
+        
 
-
+        <!-- navigation -->
         <!-- navigation mobile -->
         <nav id="navigation-mobile" class="mobile nav-mobile">
             <!-- accueil -->
-            <a href="index.html" class="page">
+            <a href="index.html" class="page-mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <defs>
                         <mask id="mask-house">
@@ -59,7 +60,7 @@
             </a>
 
             <!-- projets -->
-            <a href="https://www.thomasbruch.be/projets/" class="link page">
+            <a href="projets.html" class="link page-mobile">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
                     <path fill="#222" d="M3 4.5h6l2 2h10.5a.5.5 0 01.5.5v12a.5.5 0 01-.5.5H3.5a.5.5 0 01-.5-.5v-14a.5.5 0 01.5-.5z" />
                 </svg>
@@ -69,8 +70,8 @@
 
         <!-- navigation desktop -->
         <nav id="navigation-desktop" class="desktop">
-            <a href="index.html" class="link">Accueil</a>
-            <a href="index.html" class="link">Projets</a>
+            <a href="index.html" class="page link">Accueil</a>
+            <a href="projets.html" class="page link">Projets</a>
         </nav>
 
 
@@ -171,9 +172,10 @@
             <!-- cards prux -->
             <div class="grid-case-studies">
                 <div class="card">
-                    <a href="dataplay.html" class="link"><img src="assets/images/prux-presentation.webp" class="img-card" alt=""></a>
+                    <a href="index.html" class="link"><img src="assets/images/prux-presentation.webp" class="img-card" alt=""></a>
                     <div class="grid-flex">
-                        <p class="title-card">Prux</p>
+                        <a href="index.html" class="link"><p class="title-card">Prux</p></a>
+                        
                         <div>
                             <p class="text-card">website</p>
                             <p class="text-card text-card-thin">2025</p>
@@ -185,7 +187,7 @@
                 <div class="card">
                     <a href="dataplay.html" class="link"><img src="assets/images/dataplay-presentation.webp" class="img-card" alt="Illustration du Titanic"></a>
                     <div class="grid-flex">
-                        <p class="title-card">Dataplay</p>
+                        <a href="dataplay.html" class="link"><p class="title-card">Dataplay</p></a>
                         <div>
                             <p class="text-card">website</p>
                             <p class="text-card text-card-thin">2025</p>
@@ -195,9 +197,9 @@
 
                 <!-- card coming soon -->
                 <div class="card">
-                    <a href="dataplay.html" class="link"><img src="assets/images/hello.webp" class="img-card" alt=""></a>
+                    <a href="index.html" class="link"><img src="assets/images/hello.webp" class="img-card" alt=""></a>
                     <div class="grid-flex">
-                        <p class="title-card">Coming soon</p>
+                        <a href="index.html"><p class="title-card">Coming soon</p></a>
                         <div>
                             <p class="text-card">website</p>
                             <p class="text-card text-card-thin">2025</p>

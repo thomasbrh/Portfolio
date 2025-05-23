@@ -4,6 +4,14 @@
 
     &:hover {
         scale: 1.2;
+
+        svg {
+            fill: $color-primary;
+            
+            path {
+                fill: $color-primary;
+            }
+        }
     }
 
     @include responsive(desktop) {
@@ -51,6 +59,13 @@
     margin-bottom: 1rem;
 }
 
+.project-favori .card {
+    border: 2px solid #ff0000;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.3);
+    position: relative;
+  }
+
+  
 .center {
     position: absolute;
     top: 50%;
