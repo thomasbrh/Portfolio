@@ -1,13 +1,27 @@
+svg {
+    width: 2rem;
+    height: 2rem;;
+
+    path {
+        width: 2rem;;
+        height: 2rem;;
+    }
+}
+
+.icon {
+    width: 2rem;
+    height: 2rem;;
+}
+
+
 .icon-social {
-    width: 40px;
-    height: 40px;
+    width: 3rem;
+    height: 3rem;
 
     &:hover {
         scale: 1.2;
 
-        svg {
-            fill: $color-primary;
-            
+        svg {            
             path {
                 fill: $color-primary;
             }
@@ -15,18 +29,8 @@
     }
 
     @include responsive(desktop) {
-        width: 60px;
-        height: 60px;
-    }
-}
-
-.icon {
-    width: 20px;
-    height: 20px;
-
-    @include responsive(desktop) {
-        width: 30px;
-        height: 30px;
+        width: 3rem;
+        height: 3rem;
     }
 }
 
@@ -51,6 +55,13 @@
     object-fit:fill;
 }
 
+.card {
+    margin: 2rem 0;
+    
+    @include responsive(desktop) {
+        margin: 4rem 0;
+    }
+}
 .img-card {
     width: 100%;
     object-fit: cover;
@@ -69,4 +80,14 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+}
+
+
+.img-sections,
+.title-section,
+.paragraph,
+.cardUp,
+.cardDown {
+  will-change: transform, opacity;
+  backface-visibility: hidden;
 }

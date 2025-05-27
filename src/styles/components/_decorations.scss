@@ -7,11 +7,12 @@ a, button {
     text-decoration: none;
 }
 
+/* le cursor est inspiré d'une vidéo YouTube => crédits*/
 .cursor {
     position: absolute;
     z-index: 10000;
-    height: 45px;
-    width: 45px;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     transform: translate(-50%, -50%);
     pointer-events: none;
@@ -22,8 +23,8 @@ a, button {
 }
 
 .inner {
-    width: 10px;
-    height: 10px;
+    width: 1rem;
+    height: 1rem;
     background-image: url('../assets/images/cursor.svg');
     color: $color-primary;
     background-size: cover;
@@ -31,13 +32,14 @@ a, button {
 }  
 .inner.hover {
     background: $color-white;
+    width: 2rem;
+    height: 2rem;
     mix-blend-mode: difference;
 }
 
 .outer {
     border: 2px solid $color-white;
     transition: 100ms ease-out;
-    mix-blend-mode: difference;
 }
 
 

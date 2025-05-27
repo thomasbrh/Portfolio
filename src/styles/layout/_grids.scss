@@ -1,12 +1,13 @@
 /* grid */
 .grid {
     box-sizing: border-box;
-    padding: 2rem 1rem 0 1rem;
+    padding: 0 1rem 0 1rem;
     width: 100%;
     max-width: 100%;
+    overflow: hidden;
 
     @include responsive(tablet) {
-        padding: 0 0rem;
+        padding: 0 2rem;
         justify-content: center;
         grid-column-gap: 1rem;
         grid-template-columns: 1fr;
@@ -15,14 +16,18 @@
     @include responsive(desktop) {
         display: grid;
         padding: 0 2rem;
+        grid-column-gap: 2rem;
         grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
     }
 }
 
-.grid-case-studies {
+
+/* grid pour les cards */
+.grid-card {
     box-sizing: border-box;
     width: 100%;
     max-width: 100%;
+    overflow: hidden;
 
     @include responsive(desktop) {
         display: grid;
@@ -30,6 +35,7 @@
         grid-template-columns: 6fr 8fr 4fr;
     }
 }
+
 
 /* placement grid */
 .grid > * {

@@ -19,7 +19,7 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title-header { @include font-size-responsive(60px, 137px, 216px); 
     color: $color-white; 
-    margin: 2rem 0 3rem 0; 
+    margin: 4rem 0 1rem 0; 
 }
 .title-header-thin { font-weight: 100; }
 
