@@ -94,3 +94,24 @@ gsap.fromTo(card,
     }
 );
 });
+
+
+// Scroll verrouillé avec image fixe dans "mise en situation"
+document.querySelectorAll("section").forEach(section => {
+    const wrapper = section.querySelector(".image-wrapper");
+    const text = section.querySelector(".paragraph-center");
+  
+    if (!wrapper || !text) return;
+  
+    if (text.scrollHeight > window.innerHeight * 1.2) {
+      ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: () => `+=${text.scrollHeight}`,
+        pin: wrapper,
+        pinSpacing: true,
+        scrub: true
+      });
+    }
+  });
+  

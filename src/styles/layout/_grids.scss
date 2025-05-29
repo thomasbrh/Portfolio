@@ -7,17 +7,17 @@
     overflow: hidden;
 
     @include responsive(tablet) {
-        padding: 0 2rem;
+        padding: 0 6rem;
         justify-content: center;
-        grid-column-gap: 1rem;
-        grid-template-columns: 1fr;
+    }
+
+    @include responsive(tablet-landscape) {
+        display: grid;
+        grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
     }
     
     @include responsive(desktop) {
-        display: grid;
-        padding: 0 2rem;
         grid-column-gap: 2rem;
-        grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
     }
 }
 
@@ -29,8 +29,17 @@
     max-width: 100%;
     overflow: hidden;
 
-    @include responsive(desktop) {
+    @include responsive(tablet) {
         display: grid;
+        grid-column-gap: 2rem;
+        grid-template-columns: 2fr 2fr;
+    }
+
+    @include responsive(tablet-landscape) {
+        grid-template-columns: 6fr 8fr 4fr;
+    }
+
+    @include responsive(desktop) {
         grid-column-gap: 4rem;
         grid-template-columns: 6fr 8fr 4fr;
     }
@@ -53,9 +62,6 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
-
-    @include responsive (desktop) {
-    }
 }
 
 

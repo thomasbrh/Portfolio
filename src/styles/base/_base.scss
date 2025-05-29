@@ -5,12 +5,11 @@ html {
     overflow-x: hidden;
 }
 
- */
 html.has-mouse {
     cursor: none;
 }
-  
-html.has-touch { /* l'idée vient de chatGPT pour débuger le cursor sur mobile */
+
+html.has-touch { // l'idée vient de chatGPT pour débuger le cursor sur mobile
     cursor: auto; // laisse le curseur visible sur tactile
 }
   

@@ -101,13 +101,10 @@ nav {
         fill: $color-primary;
     }
     
-    @include responsive(tablet) {
-        flex-direction: row;
-    }
-
-    @include responsive(desktop) {
+    @include responsive(tablet-landscape) {
         display: flex;
         justify-content: flex-end;
+        flex-direction: row;
         gap: 2rem;
         top: 0;
         right: 2rem;
@@ -132,7 +129,8 @@ nav {
         background-color: $color-primary;
     }
 
-    @include responsive(desktop) {
+    @include responsive(tablet) {
+        bottom: 2rem;
         left: 2rem;
     }
 }

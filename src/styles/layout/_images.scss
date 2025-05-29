@@ -1,3 +1,4 @@
+/* images et icon pour les navgations */
 svg {
     width: 2rem;
     height: 2rem;;
@@ -34,6 +35,8 @@ svg {
     }
 }
 
+
+/* images des sections */
 .img-sections {
     position: relative;
     object-fit: cover;
@@ -43,20 +46,32 @@ svg {
     filter: grayscale(100%);
     margin-bottom: 2rem;
 
+    @include responsive(tablet) {
+        width: 100%;
+        left: 0;
+    }
+
+    @include responsive(tablet-landscape) {
+        width: calc(100% + 10rem);
+        left: -6rem;
+    }
+
     @include responsive(desktop) {
-        width: calc(100% + 6rem);
-        left: -2rem;
+        width: calc(100% + 10rem);
+        left: -6rem;
         z-index: -1000;
         margin-bottom: 4rem;
     }
 }
 
-.fit {
-    object-fit:fill;
-}
 
+/* cards */
 .card {
     margin: 2rem 0;
+
+    @include responsive(tablet) {
+        margin: 2rem 0;
+    }
     
     @include responsive(desktop) {
         margin: 4rem 0;
@@ -73,6 +88,9 @@ svg {
         filter: grayscale(0%);
     }
 }
+.fit {
+    object-fit:fill;
+}
 
 
 .center {
@@ -83,6 +101,7 @@ svg {
 }
 
 
+/* Pour les animations */
 .img-sections,
 .title-section,
 .paragraph,

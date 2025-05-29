@@ -17,6 +17,8 @@ h1, h2, h3, h4, h5, h6, p {
     line-height: 1.2;
 }
 
+
+/* titles */
 .title-header { @include font-size-responsive(60px, 137px, 216px); 
     color: $color-white; 
     margin: 4rem 0 1rem 0; 
@@ -63,6 +65,8 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title-small { @include font-size-responsive(24px, 27px, 32px); }
 
+
+/* paragraph */
 .paragraph {
     @include paragrpah ($color-white);
     @include font-size-responsive(18px, 20px, 24px);

@@ -2,10 +2,10 @@ footer {
     display: block;
     width: 100%;
     color: $color-white;
-    margin-bottom: 15dvh;
+    margin-bottom: 10rem;
 
     @include responsive (desktop) {
-        margin-bottom: 20dvh;
+        margin-bottom: 8rem;
     }
     
     ul {
@@ -22,7 +22,7 @@ footer {
         text-decoration: none;
         text-transform: uppercase;
 
-        @include responsive (desktop) {
+        @include responsive (tablet-landscape) {
             display: block;
         }
     }
