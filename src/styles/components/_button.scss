@@ -2,8 +2,9 @@
     @include button-style($color-white, #222, $color-primary, #222);
     display: flex;
     position: fixed;
-    top: 2rem;
-    right: 2rem ;
+    top: 1rem;
+    right: 1rem ;
+    z-index: 1000;
     align-items: center;
     justify-content: center;
     width: 3rem;
@@ -14,6 +15,7 @@
     text-decoration: none;
 
     @include responsive (tablet-landscape) {
-        top: calc(100dvh - 5rem)
+        top: calc(100dvh - 5rem);
+        right: 2rem;
     }
 }

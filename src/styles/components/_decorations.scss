@@ -46,8 +46,21 @@ a, button {
 /* loader */
 .loader {
     text-align: center;
-    font-size: 1.5rem;
-    padding: 2rem;
-    color: white;
+    place-items: center;
+
+    p {
+        display: flex;
+        height: 50dvh;
+        justify-content: center;
+        align-items: center;
+
+        @include responsive (tablet-landscape) {
+            height: 100dvh;
+        }
+
+        font-family: $font-primary;
+        font-size: 2rem;
+        color: white;
+    }
   }
   

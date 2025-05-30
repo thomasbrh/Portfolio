@@ -65,6 +65,14 @@
 }
 
 
+/* grid secion */
+.scroll-inner {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: start;
+}
+
+
 /* Sélecteurs pour margin */
 [data-m] { margin: attr(data-m rem); }
 [data-mt] { margin-top: attr(data-mt rem); }

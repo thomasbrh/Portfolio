@@ -111,19 +111,53 @@
         </ul>
 
 
+        <!-- header -->
+        <header class="grid" id="header">
+            <!-- gradient background -->
+            <div class="gradient-bg">
+                <svg xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <filter id="goo">
+                      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+                      <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                      <feBlend in="SourceGraphic" in2="goo" />
+                    </filter>
+                  </defs>
+                </svg>
+                <div class="gradients-container">
+                  <div class="g1"></div>
+                  <div class="g2"></div>
+                  <div class="g3"></div>
+                  <div class="g4"></div>
+                  <div class="g5"></div>
+                </div>
+            </div>
+
+            <!-- title -->
+            <h1 class="title-header grid-start2 animHeader">THOMAS<br> 
+            <span class="title-header title-header-thin">BRUCH</span><span class="title-big">.</span><span class="paragraph">2025</span>
+            </h1>
+
+            <h2 class="title-big grid-start3 animHeader">Mes <span class="title-big-thin">Projets</span>
+            </h2>
+        </header>
+
+
         <!-- main -->
         <!-- loader -->
-        <div id="loader" class="loader">Chargement des projets...</div>
+        <div id="loader" class="loader">
+            <p>Chargement des projets...</p>
+        </div>
 
         <!-- section site web -->
         <section id="sites-internet" class="grid">
-          <h3 class="title-section grid-start1 grid-end4">Mes sites<span class="title-section-red">web</span></h3>
+          <h3 class="title-section title-projets grid-start1 grid-end4">Mes sites<span class="title-section-red">web</span></h3>
 
           <div class="project-list website-projects grid-card"></div>
         </section>
         
         <section id="projets" class="grid">
-          <h3 class="title-section grid-start1 grid-end4">Tous mes <span class="title-section-red">projets</span></h3>
+          <h3 class="title-section title-projets grid-start1 grid-end4">Tous mes <span class="title-section-red">projets</span></h3>
 
           <div class="project-list all-projects grid-card"></div>
         </section>

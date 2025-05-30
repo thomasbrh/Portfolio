@@ -5,6 +5,14 @@ header {
     width: 100%;
     overflow-x: hidden;
     place-items: center;
+
+    @include responsive(tablet) {
+        place-items: center;
+    }
+
+    @include responsive(tablet-landscape) {
+        place-items:unset;
+    }
 }
 
 

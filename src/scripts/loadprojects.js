@@ -41,20 +41,21 @@
         /* cette partie à été adapté à mes besoins */
         card.innerHTML = ` 
             <div class="card">
-            <a href="/projets/${project}" class="link">
-                <img 
-                src="https://image.thum.io/get/width/600/https://thomasbruch.be/projets/${project}" 
-                alt="${project}" 
-                class="img-card"
-                >
-            </a>
-            <div class="grid-flex">
-                <a href="/projets/${project}" class="link"><p class="title-card">${project}</p></a>
-                <div>
-                <p class="text-card">${type}</p>
-                <p class="text-card text-card-thin">${year}</p>
+                <a href="/projets/${project}" class="link">
+                    <img 
+                        src="/scripts/generate-thumbnail.php?project=${project}" 
+                        alt="${project}" 
+                        class="img-card"
+                        loading="lazy"
+                    >
+                </a>
+                <div class="grid-flex">
+                    <a href="/projets/${project}" class="link"><p class="title-card">${project}</p></a>
+                    <div>
+                    <p class="text-card">${type}</p>
+                    <p class="text-card text-card-thin">${year}</p>
+                    </div>
                 </div>
-            </div>
             </div>
         `;
 
@@ -65,7 +66,11 @@
         allProjectsContainer.appendChild(card);
         });
 
-        loader.style.display = "none";
+        document.querySelectorAll(".title-section").forEach(title => {
+            title.style.display = "block";
+          });
+          loader.style.display = "none";
+
     } catch (error) {
         loader.textContent = "Erreur de chargement.";
         console.error("Erreur lors du chargement des projets:", error);
