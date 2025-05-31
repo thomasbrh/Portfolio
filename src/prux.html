@@ -8,11 +8,11 @@
         <meta name="description" content="">
         <!-- meta Partage -->
         <meta property="og:site_name" content="Portfolio">
-        <meta property="og:title" content="Portfolio - Projets">
+        <meta property="og:title" content="Portfolio - DataPlay">
         <meta property="og:description" content="Mon Portfolio d'étudiant en interface et develloppement (2025).">
         <meta property="og:type" content="website">
         <meta property="og:url" content="thomasbruch.be">
-        <meta property="og:image" content="assets/images/Tb..svg">
+        <meta property="og:image" content="assets/images/titanic.svg">
         <meta property="og:image:width" content="1800">
         <meta property="og:image:height" content="945">
         <!-- link -->
@@ -24,7 +24,7 @@
         <link rel="stylesheet" href="https://use.typekit.net/fov5wdk.css">
     </head>
 
-    <body class="background"> 
+    <body class="background">
         <!-- cursor -->
         <div class="cursor inner"></div>
         <div class="cursor outer"></div>
@@ -111,15 +111,19 @@
         </ul>
 
 
+        <!-- Go site -->
+        <a href="http://rux.thomasbruch.be" class="btn link">Go</a>
+
+
         <!-- header -->
-        <header class="" id="header">
+        <header class="grid" id="header">
             <!-- gradient background -->
             <div class="gradient-bg">
                 <svg xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <filter id="goo">
                       <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
-                      <feColorMatrix in="blur" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
+                      <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -8" result="goo" />
                       <feBlend in="SourceGraphic" in2="goo" />
                     </filter>
                   </defs>
@@ -133,44 +137,88 @@
                 </div>
             </div>
 
+
             <!-- title -->
             <div class="">
-                <div class="flex-start">
-                    <h1 class="title-header animHeader">THOMAS<br> 
-                        <span class="title-header title-header-thin">BRUCH</span><span class="title-big">.</span><span class="paragraph">2025</span>
-                    </h1>
+                <div class="flex-start"> 
+                    <h1 class="title-header grid-start2 grid-end6 animHeader">PRUX</h1>
                 </div>
 
                 <div class="flex-end">
-                    <h2 class="title-big animHeader">Mes <span class="title-big-thin">projets</span>
-                    </h2>
+                    <h2 class="title-big grid-start3 animHeader">Projet<span class="title-big-thin">Rethinking UX</span></h2>
                 </div>
-             </div>
+            </div>
         </header>
 
 
         <!-- main -->
-        <!-- loader -->
-        <div id="loader" class="loader">
-            <p>Chargement des projets...</p>
-        </div>
-
-        <!-- section site web -->
-        <section id="sites-internet" class="">
-            <div class="grid">
-                <h3 class="title-section title-projets grid-start1 grid-end4">Mes sites<span class="title-section-red">web</span></h3>
+        <!-- sections mise en situation -->
+        <section id="section-mise-en-situation" class="grid">
+            <div class="img-wrapper grid-start1 grid-end3">
+                <img src="assets/images/prux-presentation.webp" alt="Photo de deux personnes qui prennent une photo" class="img-sections">
             </div>
 
-            <div class="project-list website-projects grid-card"></div>
+            <div class="grid-start3 grid-end6 paragraph-center">
+                <h3 class="title-section"><span class="title-section-red">Mise</span> en situation</h3>
+
+                <p class="paragraph">Dans le cadre de l’UE Rethinking UX (RUX), nous avons été amenés à repenser l’aménagement d’une salle de classe vide (A084) en partant des besoins réels des étudiant·e·s. L’objectif : concevoir et proposer des solutions concrètes et réalisables pour améliorer leur expérience dans cet espace.</p>
+
+                <p class="paragraph">L’objectif est d’identifier leurs attentes pour concevoir un aménagement fonctionnel améliorant leur expérience et leurs conditions d’apprentissage.</p>
+            </div>
         </section>
-        
-        <section id="projets" class="">
-            <div class="grid">
-                <h3 class="title-section title-projets grid-start1 grid-end4">Tous mes <span class="title-section-red">travaux</span></h3>
+
+
+        <!-- sections le point de depart -->
+        <section id="point-de-depart" class="grid">
+            <div class="img-wrapper grid-start1 grid-end3">
+                <img src="assets/images/prux-travaux.webp" alt="Photo de la classe avant les travaux" class="img-sections fit">
             </div>
 
-            <div class="project-list all-projects grid-card"></div>
+            <div class="grid-start3 grid-end6 paragraph-center">
+                <h3 class="title-section"> <span class="title-section-red">Le .</span> de départ</h3>
+    
+                <p class="paragraph">Le projet a débuté en groupe : ensemble, nous avons identifié les besoins et les envies des étudiants à travers des échanges et un questionnaire. L’objectif était de proposer des solutions adaptées tout en respectant les contraintes budgétaires. Nous avons ensuite pris des décisions collectives et réalisé une étude de marché en définissant trois scénarios budgétaires distincts.</p>
+    
+                <p class="paragraph">Par la suite, chacun devait réaliser un case study sous forme de site internet, en se basant sur le contenu que nous avions élaboré collectivement. Pour ma part, j’ai choisi une approche simple et épurée, adaptée à la nature littéraire du travail.</p>
+            </div>
         </section>
+
+
+        <!-- sections vision creatives -->
+        <section id="vision-creatives" class="grid">
+            <div class="img-wrapper grid-start1 grid-end3">
+                <img src="assets/images/prux-vision-creative.webp" alt="Image du figma" class="img-sections">
+            </div>
+
+            <div class="grid-start3 grid-end6 paragraph-center">
+                <h3 class="title-section"> <span class="title-section-red">Du</span> concept à la <span class="title-section-thin">vision creative</span></h3>
+    
+                <p class="paragraph">J’ai choisi d’opter pour un design simple et épuré afin de faciliter la lecture et mettre en valeur le contenu textuel. L’idée était de ne pas surcharger visuellement l’interface, mais au contraire de créer un environnement clair et lisible, qui guide naturellement l’œil du lecteur.</p>
+    
+                <p class="paragraph">Pour apporter une touche graphique discrète, j’ai utilisé des lignes comme éléments visuels. Elles permettent de structurer la page tout en conservant la légèreté du design. J’ai également expérimenté avec la mise en forme du texte : jeux de hiérarchies typographiques, espacements travaillés, alignements précis… L’objectif était de créer un rythme de lecture agréable et cohérent.</p>
+
+                <p class="paragraph">Le design textuel a représenté une part essentielle du projet. Le contenu étant principalement textuel, il était crucial de réfléchir à la manière de le présenter de façon esthétique et accessible, tout en conservant une certaine personnalité graphique.</p>
+            </div>
+        </section>
+
+
+        <!-- sections Développement du site -->
+        <section id="vision-creatives" class="grid">
+            <div class="img-wrapper grid-start1 grid-end3">
+                <img src="assets/images/prux-dev.webp" alt="Image du site en construction" class="img-sections">
+            </div>
+
+            <div class="grid-start3 grid-end6 paragraph-center">
+                <h3 class="title-section">Développement du site</h3>
+    
+                <p class="paragraph">Pour la partie développement, je me suis lancé quelques défis techniques afin de sortir de ma zone de confort. Le principal challenge était de créer un slider interactif pour illustrer les différents budgets. J’ai également voulu positionner des lignes graphiques à des endroits précis, ce qui m’a poussé à expérimenter davantage avec le positionnement CSS. Enfin, j’ai intégré un mode sombre pour offrir une alternative visuelle à l'utilisateur.</p>
+    
+                <p class="paragraph">Ces défis m’ont permis d’apprendre de nouvelles choses. Par exemple, j’ai utilisé l’intelligence artificielle pour m’aider à construire le slider de manière efficace. J’ai aussi approfondi l’utilisation des pseudo-éléments ::before et ::after, très utiles pour insérer mes lignes graphiques sans alourdir le HTML. Quant au mode sombre, nous en avions déjà développé un en cours, j’ai donc pu m’appuyer sur cette base et l’adapter à mon site.</p>
+
+                <p class="paragraph">Ce projet m’a permis de renforcer ma maîtrise du HTML et du CSS, mais aussi de mieux comprendre comment structurer mon code pour qu’il soit à la fois fonctionnel et propre.</p>
+            </div>
+        </section>
+
 
         <!-- footer -->
         <footer id="footer" class="">

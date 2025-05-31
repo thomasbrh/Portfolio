@@ -35,7 +35,11 @@ body {
 section {
     margin-top: 4rem;
 
-    @include responsive(desktop) {
+    @include responsive(tablet) {
+        margin-top: 6rem;
+    }
+
+    @include responsive(tablet-landscape) {
         margin-top: 8rem;
     }
 }

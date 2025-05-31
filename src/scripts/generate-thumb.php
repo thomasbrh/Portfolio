@@ -1,3 +1,4 @@
+<!-- à mettre manuellement dans le dossier script sur filezila -->
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
