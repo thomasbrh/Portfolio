@@ -3,15 +3,22 @@
 /* Le background vient d'une vidéo YouTube/codePen => crédits et a été adpaté selon mes besoins */
 header {
     width: 100%;
-    overflow-x: hidden;
+    overflow: hidden;
     place-items: center;
+    box-sizing: border-box;
+    padding: 0 1rem;
 
     @include responsive(tablet) {
         place-items: center;
+        padding: 0 8rem;
     }
 
     @include responsive(tablet-landscape) {
-        place-items:unset;
+        padding: 0 6rem;
+    }
+
+    @include responsive(desktop) {
+        padding: 0 8rem;
     }
 }
 

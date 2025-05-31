@@ -47,3 +47,18 @@
 	max-width: 75ch;	
 	margin-bottom: 2rem;
 }
+
+
+/* grid */
+@mixin grid($padding, $gap) {
+	padding: $padding;
+	gap: $gap;
+	box-sizing: border-box;
+	width: 100%;
+	max-width: 100%;
+	overflow: hidden;
+
+	@include responsive(tablet-landscape) {
+		display: grid;
+	}
+}

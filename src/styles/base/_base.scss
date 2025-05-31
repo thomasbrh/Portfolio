@@ -28,12 +28,6 @@ header, body, section, footer{
     padding: 0;
 }
 
-header {
-    @include responsive(desktop) {
-        height: 100dvh;  
-    }
-}
-
 body {
     background-color: $color-bg;
 }

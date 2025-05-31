@@ -1,36 +1,32 @@
+* {
+    box-sizing: border-box;
+}
 /* grid */
 .grid {
-    box-sizing: border-box;
-    padding: 0 1rem 0 1rem;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    @include grid(0 1rem, 0);
 
     @include responsive(tablet) {
-        padding: 0 6rem;
+        padding: 0 8rem;
         justify-content: center;
     }
 
     @include responsive(tablet-landscape) {
-        display: grid;
         grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
+        padding: 0 6rem;
     }
     
     @include responsive(desktop) {
         grid-column-gap: 2rem;
+        padding: 0 8rem;
     }
 }
 
 
 /* grid pour les cards */
 .grid-card {
-    box-sizing: border-box;
-    width: 100%;
-    max-width: 100%;
-    overflow: hidden;
+    @include grid(0, 1rem);
 
     @include responsive(tablet) {
-        display: grid;
         grid-column-gap: 2rem;
         grid-template-columns: 2fr 2fr;
     }
@@ -62,6 +58,14 @@
     display: flex;
     justify-content: space-between;
     gap: 1rem;
+}
+.flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+.flex-start {
+    display: flex;
+    justify-content: flex-start;
 }
 
 

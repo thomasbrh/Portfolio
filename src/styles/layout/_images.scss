@@ -47,23 +47,21 @@ svg {
     margin-bottom: 2rem;
 
     @include responsive(tablet) {
-        width: 100%;
-        left: 0;
+        width: calc(100% + 4rem);
+        left: -2rem;
     }
 
     @include responsive(tablet-landscape) {
-        width: calc(100% + 10rem);
-        left: -6rem;
+        z-index: -1000;
+        width: calc(100% + 12rem);
+        left: -8rem;
     }
 
     @include responsive(desktop) {
-        width: calc(100% + 10rem);
-        left: -6rem;
-        z-index: -1000;
         margin-bottom: 4rem;
     }
 }
- 
+
 
 /* cards */
 .card {

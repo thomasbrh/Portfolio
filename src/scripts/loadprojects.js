@@ -43,17 +43,19 @@
             <div class="card">
                 <a href="/projets/${project}" class="link">
                     <img 
-                        src="/scripts/generate-thumbnail.php?project=${project}" 
+                        src="/portfolio/scripts/generate-thumb.php?project=${project}"
                         alt="${project}" 
                         class="img-card"
                         loading="lazy"
                     >
                 </a>
+                
                 <div class="grid-flex">
-                    <a href="/projets/${project}" class="link"><p class="title-card">${project}</p></a>
+                        <a href="/projets/${project}" class="link"><p class="title-card">${project}</p></a>
+
                     <div>
-                    <p class="text-card">${type}</p>
-                    <p class="text-card text-card-thin">${year}</p>
+                        <p class="text-card">${type}</p>
+                        <p class="text-card text-card-thin">${year}</p>
                     </div>
                 </div>
             </div>

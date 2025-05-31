@@ -1,37 +1,68 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 $project = basename($_GET['project'] ?? '');
 if (!$project) {
     http_response_code(400);
     exit('Nom du projet manquant.');
 }
 
-$previewDir = __DIR__ . '/../assets/images/previews';
-$previewPath = "$previewDir/$project.jpg";
+// Dossier de destination
+$previewDir = $_SERVER['DOCUMENT_ROOT'] . '/portfolio/assets/images/previews';
+$previewPath = "$previewDir/$project.webp";
 
-// Crée le dossier si nécessaire
+// Créer le dossier s'il n'existe pas
 if (!file_exists($previewDir)) {
-    mkdir($previewDir, 0755, true);
+    if (!mkdir($previewDir, 0755, true)) {
+        http_response_code(500);
+        exit("Erreur : impossible de créer le dossier previews.");
+    }
 }
 
-// Si l'image existe déjà, on la sert
+// Si l'image existe déjà, on la renvoie
 if (file_exists($previewPath)) {
-    header('Content-Type: image/jpeg');
+    header('Content-Type: image/webp');
     readfile($previewPath);
     exit;
 }
 
-// Sinon, on génère via Thum.io
+// Générer via thum.io
 $thumbnailUrl = "https://image.thum.io/get/width/600/https://thomasbruch.be/projets/$project";
-$imageData = @file_get_contents($thumbnailUrl);
 
-if ($imageData === false) {
+// Récupérer l'image distante (cURL)
+$ch = curl_init($thumbnailUrl);
+curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+$imageData = curl_exec($ch);
+curl_close($ch);
+
+if (!$imageData) {
     http_response_code(500);
     exit('Erreur lors du téléchargement de la miniature.');
 }
 
-// Sauvegarde l'image
-file_put_contents($previewPath, $imageData);
+// Convertir l'image reçue en ressource GD
+$image = @imagecreatefromstring($imageData);
+if (!$image) {
+    http_response_code(500);
+    exit("Erreur lors de la lecture de l'image.");
+}
 
-// Sert l’image
-header('Content-Type: image/jpeg');
-echo $imageData;
+// Enregistrer au format .webp
+if (!imagewebp($image, $previewPath, 80)) {
+    imagedestroy($image);
+    http_response_code(500);
+    exit("Erreur lors de l'enregistrement de l'image .webp");
+}
+
+imagedestroy($image);
+
+// Vérifie que le fichier a bien été créé
+if (!file_exists($previewPath) || filesize($previewPath) === 0) {
+    http_response_code(500);
+    exit("Fichier .webp non créé ou vide.");
+}
+
+// Retourner l'image .webp au navigateur
+header('Content-Type: image/webp');
+readfile($previewPath);
