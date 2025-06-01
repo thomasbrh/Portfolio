@@ -4,7 +4,8 @@
 @import "utils/variables";
 
 //import des styles de bases
-@import "base/base";
+@import "base/base";    
+@import "../../node_modules/modern-normalize/modern-normalize.css";
 @import "base/reset";
 
 // import des styles mises en page
