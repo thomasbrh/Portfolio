@@ -43,7 +43,7 @@ svg {
     aspect-ratio: 10/10;
     width: calc(100% + 2rem);
     left: -1rem;
-    filter: grayscale(100%);
+    filter: grayscale(100%) brightness(0.70) contrast(1.05);
     margin-bottom: 2rem;
 
     @include responsive(tablet) {
