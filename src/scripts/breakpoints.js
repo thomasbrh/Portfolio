@@ -8,4 +8,4 @@ export const breakpoints = {
     tabletLandscapeMax: 1279,   // max pour tablette paysage
     
     desktopMin: 1280            // min pour desktop
-  };
+};

@@ -1,4 +1,4 @@
-/* Classe active pour la navigation */
+/* Classe active pour la navigation */ //la classe active a été aidé de l'ia par après car ne fonctionnait plus sur l'hébergeur
 (() => {
     const currentPath = window.location.pathname.replace(/\/$/, "");
 

@@ -14,6 +14,7 @@ return "desktop";
 
 let currentBreakpoint = getBreakpoint();
 
+// la fonction applyImagePinScrollTriggers vient de l'ia et a été utilisée selon mes besoins 
 function applyImagePinScrollTriggers() {
 const screenWidth = window.innerWidth;
 const isMobileOrTablet = screenWidth <= breakpoints.tabletMax;

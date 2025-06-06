@@ -1,4 +1,4 @@
-<!-- à mettre manuellement dans le dossier script sur filezila -->
+<!-- à mettre manuellement dans le dossier script sur filezila --> // code générer par chatGPT 
 <?php
 ini_set('display_errors', 1);
 error_reporting(E_ALL);

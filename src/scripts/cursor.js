@@ -1,4 +1,4 @@
-const html = document.documentElement; // <html>
+const html = document.documentElement; // code refait à partir d'une vidéo youtube => crédits
 
 const isMouse = window.matchMedia("(pointer: fine)").matches;
 const isTouch = window.matchMedia("(pointer: coarse)").matches;
