@@ -76,6 +76,8 @@ figure {
     }
     
     @include responsive(desktop) {
+        display: flex;
+        flex-direction: column;
         margin: 4rem 0;
     }
 }

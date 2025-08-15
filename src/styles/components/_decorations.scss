@@ -10,11 +10,12 @@ a, button {
 
 /* le cursor est inspiré d'une vidéo YouTube => crédits*/
 .cursor {
-    position: absolute;
+    position: fixed;
     z-index: 10000;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
+    /* mix-blend-mode: difference; */
     transform: translate(-50%, -50%);
     pointer-events: none;
 }

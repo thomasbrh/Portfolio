@@ -9,12 +9,13 @@
 
     @include responsive(tablet) {
         padding: 0 8rem;
+        max-width: 100dvw;
         justify-content: center;
     }
 
     @include responsive(tablet-landscape) {
         grid-template-columns: 1fr 2fr 3fr 1fr 1fr;
-        padding: 0 6rem;
+        padding: 0 8rem;
     }
     
     @include responsive(desktop) {
@@ -30,19 +31,18 @@
 
     @include responsive(tablet) {
         padding: 0 8rem;
+        max-width: 100dvw;
         display: grid;
         grid-column-gap: 2rem;
         grid-template-columns: 2fr 2fr;
     }
 
     @include responsive(tablet-landscape) {
-        padding: 0 6rem;
+        padding: 0 8rem;
         grid-template-columns: 6fr 8fr 4fr;
     }
 
     @include responsive(desktop) {
-        padding: 0 4rem;
-        grid-column-gap: 4rem;
         grid-template-columns: 6fr 8fr 4fr;
     }
 }

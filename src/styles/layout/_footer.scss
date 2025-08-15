@@ -14,7 +14,7 @@ footer {
     }
 
     @include responsive (desktop) {
-        padding: 0 4rem;
+        padding: 0 8rem;
     }
     
     ul {
@@ -30,6 +30,10 @@ footer {
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
+
+        &:hover {
+            text-transform: scale(1.2);
+        }
 
         @include responsive (tablet-landscape) {
             display: block;

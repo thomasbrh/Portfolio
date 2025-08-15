@@ -1,4 +1,4 @@
-const html = document.documentElement; // code refait à partir d'une vidéo youtube => crédits
+const html = document.documentElement;
 
 const isMouse = window.matchMedia("(pointer: fine)").matches;
 const isTouch = window.matchMedia("(pointer: coarse)").matches;
@@ -12,25 +12,45 @@ if (isMouse) {
 window.matchMedia("(pointer: fine)").addEventListener("change", (e) => {
     html.classList.toggle("has-mouse", e.matches);
     html.classList.toggle("has-touch", !e.matches);
-}); /* cette partie viens de L'IA (avec les classes scs*/
+});
 
 /* cursor */
 const cursors = document.querySelectorAll(".cursor");
 const links = document.querySelectorAll(".link");
 
-window.addEventListener("mousemove", (e) => {
+let mouseX = 0, mouseY = 0, rafId = null;
+
+function updateCursor() {
     cursors.forEach(el => {
-        el.style.left = `${e.pageX}px`;
-        el.style.top = `${e.pageY}px`;
+        el.style.left = `${mouseX}px`;
+        el.style.top = `${mouseY}px`;
+    });
+    rafId = null;
+}
+
+window.addEventListener("mousemove", (e) => {
+    mouseX = e.clientX;
+    mouseY = e.clientY;
+    if (!rafId) {
+        rafId = requestAnimationFrame(updateCursor);
+    }
+});
+
+// Cache le curseur custom quand la souris quitte la fenêtre
+window.addEventListener("mouseleave", () => {
+    cursors.forEach(el => el.style.opacity = "0");
+});
+window.addEventListener("mouseenter", () => {
+    cursors.forEach(el => el.style.opacity = "1");
+});
+
+// Ajoute les listeners UNE SEULE FOIS
+links.forEach(link => {
+    link.addEventListener("mouseenter", () => {
+        cursors.forEach(el => el.classList.add("hover"));
     });
 
-    links.forEach(link => {
-        link.addEventListener("mouseenter", () => {
-            cursors.forEach(el => el.classList.add("hover"));
-        });
-
-        link.addEventListener("mouseleave", () => {
-            cursors.forEach(el => el.classList.remove("hover"));
-        });
+    link.addEventListener("mouseleave", () => {
+        cursors.forEach(el => el.classList.remove("hover"));
     });
 });
