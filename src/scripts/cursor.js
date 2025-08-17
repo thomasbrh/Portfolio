@@ -54,3 +54,18 @@ links.forEach(link => {
         cursors.forEach(el => el.classList.remove("hover"));
     });
 });
+
+// Rafraîchit l'état hover lors du scroll
+window.addEventListener("scroll", () => {
+    // Obtient l'élément sous le curseur après le scroll
+    const elementUnderCursor = document.elementFromPoint(mouseX, mouseY);
+    
+    // Trouve le lien le plus proche (l'élément ou un parent avec la classe "link")
+    const linkElement = elementUnderCursor && elementUnderCursor.closest(".link");
+    
+    if (linkElement) {
+        cursors.forEach(el => el.classList.add("hover"));
+    } else {
+        cursors.forEach(el => el.classList.remove("hover"));
+    }
+});

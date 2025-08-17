@@ -103,7 +103,7 @@ elements.forEach(el => {
 animateScrollSync(
     '.img-sections',
     { x: -100, opacity: 0 },
-    { x: 0, opacity: 1, ease: "power3.out", duration: 1.2 }
+    { x: 0, opacity: 1, ease: "power3.out", duration: 0.8 }
 );
 
 
@@ -111,7 +111,7 @@ animateScrollSync(
 animateScrollSync(
     '.title-section',
     { x: 200, opacity: 0 },
-    { x: 0, opacity: 1, ease: "power3.out", duration: 1.2 }
+    { x: 0, opacity: 1, ease: "power3.out", duration: 0.8 }
 );
 
 
@@ -119,7 +119,7 @@ animateScrollSync(
 animateScrollSync(
     '.paragraph',
     { x: -200, opacity: 0 },
-    { x: 0, opacity: 1, ease: "power3.out", duration: 1.2 }
+    { x: 0, opacity: 1, ease: "power3.out", duration: 0.8 }
 );
 
 
@@ -127,7 +127,7 @@ animateScrollSync(
 gsap.from('.animHeader', {
     opacity: 0,
     y: 400,
-    duration: 1.5,
+    duration: 1.0,
     ease: 'power3.out',
     delay: 0.2
 });
@@ -154,7 +154,7 @@ function animateFooterScroll() {
     gsap.fromTo(el, fromVars, {
       ...toVars,
       ease: "power3.out",
-      duration: 1.2,
+      duration: 0.8,
       scrollTrigger: {
         trigger: el,
         start: "top 95%",
@@ -176,16 +176,16 @@ function animateCards() {
 const width = window.innerWidth;
 const cards = document.querySelectorAll('.card');
 
-const isMobileOrTablet = width <= breakpoints.tabletMax;
+const isMobileOrTablet = width <= breakpoints.tabletLandscapeMax;
 
 cards.forEach((card, index) => {
     let fromY;
 
     if (isMobileOrTablet) {
-    // Tous les cards glissent vers le haut depuis le bas
+    // Mobile et tablette : tous les cards glissent vers le haut depuis le bas
     fromY = 150;
     } else {
-    // Cards paysage ou desktop : 2 vers le bas, celle du milieu vers le haut
+    // Desktop seulement : 2 vers le bas, celle du milieu vers le haut
     const isMiddle = index % 3 === 1;
     fromY = isMiddle ? -150 : 150;
     }
@@ -197,7 +197,7 @@ cards.forEach((card, index) => {
         y: 0,
         opacity: 1,
         ease: "power3.out",
-        duration: 1.2,
+        duration: 0.8,
         scrollTrigger: {
             trigger: card,
             start: "top 80%",
