@@ -14,37 +14,32 @@ a, button {
   transform: scale(1.05);
   font-weight: 600;
 }
-
-/* Hover spécifique pour les cartes */
 .card-link {
     text-decoration: none;
     color: inherit;
     display: block;
     transition: all 0.2s ease;
 }
-
 .card-link:hover {
     transform: scale(1.02);
     transform-origin: center;
 }
-
 .card-link:hover .title-card {
     color: $color-primary;
     font-weight: 600;
 }
-
 .card-link:hover .img-card {
     filter: grayscale(0%);
 }
 
-/* le cursor est inspiré d'une vidéo YouTube => crédits*/
-.cursor {
+
+/* curseur */
+.cursor { /* le cursor est inspiré d'une vidéo YouTube => crédits*/
     position: fixed;
     z-index: 10000;
     height: 2rem;
     width: 2rem;
     border-radius: 50%;
-    /* mix-blend-mode: difference; */
     transform: translate(-50%, -50%);
     pointer-events: none;
 }
@@ -71,25 +66,4 @@ a, button {
 .outer {
     border: 2px solid $color-white;
     transition: 100ms ease-out;
-}
-
-
-/* loader */
-.loader {
-    text-align: center;
-    place-items: center;
-
-    p {
-        display: flex;
-        height: 50dvh;
-        justify-content: center;
-        align-items: center;
-        font-family: $font-primary;
-        font-size: 2rem;
-        color: white;
-
-        @include responsive (tablet-landscape) {
-            height: 100dvh;
-        }
-    }
 }

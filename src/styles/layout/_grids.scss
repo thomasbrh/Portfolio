@@ -1,8 +1,3 @@
-* {
-    box-sizing: border-box;
-}
-
-
 /* grid */
 .grid {
     @include grid(0 1rem, 0);
@@ -69,28 +64,4 @@
 .flex-start {
     display: flex;
     justify-content: flex-start;
-}
-
-
-/* grid secion */
-.scroll-inner {
-    display: grid;
-    grid-template-columns: repeat(6, 1fr);
-    align-items: start;
-}
-
-
-/* Sélecteurs pour margin */
-[data-m] { margin: attr(data-m rem); }
-[data-mt] { margin-top: attr(data-mt rem); }
-[data-mb] { margin-bottom: attr(data-mb rem); }
-[data-ml] { margin-left: attr(data-ml rem); }
-[data-mr] { margin-right: attr(data-mr rem); }
-[data-mx] {
-    margin-left: attr(data-mx rem);
-    margin-right: attr(data-mx rem);
-}
-[data-my] {
-    margin-top: attr(data-my rem);
-    margin-bottom: attr(data-my rem);
 }

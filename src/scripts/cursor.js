@@ -19,6 +19,8 @@ const cursors = document.querySelectorAll(".cursor");
 const links = document.querySelectorAll(".link");
 
 let mouseX = 0, mouseY = 0, rafId = null;
+let lastUpdate = 0;
+const throttleDelay = 16; // +- 60fps
 
 function updateCursor() {
     cursors.forEach(el => {
@@ -29,8 +31,13 @@ function updateCursor() {
 }
 
 window.addEventListener("mousemove", (e) => {
+    const now = Date.now();
+    if (now - lastUpdate < throttleDelay) return;
+    
     mouseX = e.clientX;
     mouseY = e.clientY;
+    lastUpdate = now;
+    
     if (!rafId) {
         rafId = requestAnimationFrame(updateCursor);
     }

@@ -64,11 +64,6 @@ h1, h2, h3, h4, h5, h6, p {
 
 .title-small { @include font-size-responsive(24px, 27px, 32px); }
 
-.title-projets {
-    display: none
-}
-
-
 /* paragraph */
 .paragraph {
     @include paragrpah ($color-white);

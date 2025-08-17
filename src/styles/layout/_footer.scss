@@ -7,14 +7,6 @@ footer {
     @include responsive (tablet) {
         padding: 0 8rem;
     }
-
-    @include responsive (tablet-landscape) {
-        padding: 0 8rem;
-    }
-
-    @include responsive (desktop) {
-        padding: 0 8rem;
-    }
     
     ul {
         padding: 0;
