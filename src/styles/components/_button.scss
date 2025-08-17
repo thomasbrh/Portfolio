@@ -1,5 +1,5 @@
 .btn {
-    @include button-style($color-white, #222, $color-primary, #222);
+    @include button-style($color-white, #222, $color-primary, $color-white);
     display: flex;
     position: fixed;
     top: 1rem;

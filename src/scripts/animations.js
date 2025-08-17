@@ -49,7 +49,7 @@ document.querySelectorAll(".img-sections").forEach((image) => {
 }
 
 function resetAndUpdatePinTriggers() {
-// Supprime uniquement les triggers liés au pin d’image
+// Supprime uniquement les triggers liés au pin d'image
 ScrollTrigger.getAll().forEach(trigger => {
     if (trigger.vars && trigger.vars.pin && trigger.vars.pin.classList?.contains("img-sections")) {
     trigger.kill();
@@ -133,7 +133,7 @@ gsap.from('.animHeader', {
 });
 
 
-// Footer
+// Footer - Animation d'apparition compatible avec hover scale
 function animateFooterScroll() {
   const width = window.innerWidth;
   const footerElements = document.querySelectorAll('.animFooter');
@@ -160,13 +160,16 @@ function animateFooterScroll() {
         start: "top 95%",
         end: "top 85%",
         markers: false,
-        scrub: true
+        scrub: true,
+        onComplete: function() {
+          // Nettoie seulement les propriétés d'animation, pas les transforms de hover
+          gsap.set(el, { clearProps: "x,y,opacity" });
+        }
       }
     });
   });
 }
 document.addEventListener("DOMContentLoaded", animateFooterScroll);
-
 
 
 function animateCards() {

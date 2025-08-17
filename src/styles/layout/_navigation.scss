@@ -50,20 +50,30 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+    transition: all 0.1s ease;
 
     svg {
         display: flex;
         justify-content: center;
+        
+        path {
+            fill: #222;
+        }
+    }
+
+    &:hover {
+        transform: scale(1.05);
     }
 }
 .page-mobile--active {
     text-decoration: none;
-    color: #222;
+    color: $color-primary;
+    font-weight: 600;
 
-    
     svg {
         path {
-            fill: $color-white;
+            fill: $color-primary;
         }
     }
 }
@@ -75,10 +85,12 @@ nav {
     font-weight: 100;
     color: $color-white;
     padding-bottom: 1rem;
+    transition: all 0.1s ease;
 
     &:hover {
-        scale: 1.2;
+        transform: scale(1.05);
         color: $color-primary;
+        font-weight: 600;
     }
 }
 .page--active {
@@ -98,10 +110,6 @@ nav {
     height: 3rem;
     align-items: center;
     bottom: 0.8rem;
-
-    &:hover {
-        fill: $color-primary;
-    }
     
     @include responsive(tablet-landscape) {
         display: flex;
@@ -110,6 +118,34 @@ nav {
         gap: 2rem;
         top: 0;
         right: 2rem;
+    }
+
+    a.link {
+        transition: all 0.1s ease;
+        cursor: pointer;
+        
+        svg.icon-social {
+            fill: $color-white;
+            transition: all 0.1s ease;
+            
+            path {
+                fill: $color-white;
+            }
+        }
+        
+        &:hover {
+            color: inherit; // Empêche le changement de couleur du texte
+            font-weight: inherit; // Empêche le changement de font-weight
+            
+            svg.icon-social {
+                fill: $color-primary !important;
+                transform: scale(1.05);
+                
+                path {
+                    fill: $color-primary !important;
+                }
+            }
+        }
     }
 }
 
@@ -126,15 +162,20 @@ nav {
     left: 1rem;
     border: none;
     cursor: pointer;
-
-    &:hover {
-        /* background-color: $color-primary; */
-        scale: 1.2;
-    }
+    transition: all 0.1s ease;
 
     @include responsive(tablet) {
         bottom: 2rem;
         left: 2rem;
+    }
+
+    &:hover {
+        transform: scale(1.05);
+        background-color: $color-primary;
+        
+        .icon {
+            filter: brightness(0) invert(1);
+        }
     }
 }
 

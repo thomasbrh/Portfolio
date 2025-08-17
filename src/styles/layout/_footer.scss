@@ -1,5 +1,4 @@
 footer {
-    display: block;
     color: $color-white;
     margin-top: 2rem;
     margin-bottom: 25dvh;
@@ -10,7 +9,7 @@ footer {
     }
 
     @include responsive (tablet-landscape) {
-        padding: 0 6rem;
+        padding: 0 8rem;
     }
 
     @include responsive (desktop) {
@@ -23,20 +22,24 @@ footer {
     }
 
     a {
-        display: flex;
+        display: block;
+        width: fit-content;
+        margin: 0 auto;
         padding: 0.5rem;
         font-family: $font-primary;
-        justify-content: center;
+        text-align: center;
         color: $color-white;
         text-decoration: none;
         text-transform: uppercase;
 
-        &:hover {
-            text-transform: scale(1.2);
+        @include responsive (tablet-landscape) {
+            text-align: left;
+            margin: 0;
         }
 
-        @include responsive (tablet-landscape) {
-            display: block;
+        @include responsive (desktop) {
+            text-align: left;
+            margin: 0;
         }
     }
 }

@@ -5,8 +5,37 @@ a, button {
   
 .link {
     text-decoration: none;
+    transition: all 0.1s ease;
 }
 
+/* Hover pour les liens généraux */
+.link-general:hover {
+  color: $color-primary;
+  transform: scale(1.05);
+  font-weight: 600;
+}
+
+/* Hover spécifique pour les cartes */
+.card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: all 0.2s ease;
+}
+
+.card-link:hover {
+    transform: scale(1.02);
+    transform-origin: center;
+}
+
+.card-link:hover .title-card {
+    color: $color-primary;
+    font-weight: 600;
+}
+
+.card-link:hover .img-card {
+    filter: grayscale(0%);
+}
 
 /* le cursor est inspiré d'une vidéo YouTube => crédits*/
 .cursor {
@@ -55,14 +84,12 @@ a, button {
         height: 50dvh;
         justify-content: center;
         align-items: center;
+        font-family: $font-primary;
+        font-size: 2rem;
+        color: white;
 
         @include responsive (tablet-landscape) {
             height: 100dvh;
         }
-
-        font-family: $font-primary;
-        font-size: 2rem;
-        color: white;
     }
-  }
-  
+}

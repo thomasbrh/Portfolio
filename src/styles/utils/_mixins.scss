@@ -36,7 +36,13 @@
     color: $color;
     border: none;
     cursor: pointer;
-    &:hover { background-color: $bg-hover; color: $hover; }
+    transition: all 0.1s ease;
+    &:hover { 
+        background-color: $bg-hover; 
+        color: $color-white;
+        transform: scale(1.05);
+        font-weight: 600;
+    }
 }
 
 /* paragrpah */

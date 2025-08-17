@@ -49,7 +49,6 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 .title-card { @include font-size-responsive(28px, 24px, 48px); 
-    margin-bottom: 1rem; 
     text-transform: uppercase;
     text-decoration: none;
 }

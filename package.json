@@ -9,7 +9,7 @@
     "watch": "npx mix watch",
     "clean": "rimraf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "vite"
+    "dev": "npx mix watch"
   },
   "repository": {
     "type": "git",

@@ -19,16 +19,6 @@ svg {
     width: 3rem;
     height: 3rem;
 
-    &:hover {
-        scale: 1.2;
-
-        svg {            
-            path {
-                fill: $color-primary;
-            }
-        }
-    }
-
     @include responsive(desktop) {
         width: 3rem;
         height: 3rem;
@@ -69,31 +59,24 @@ figure {
 
 /* cards */
 .card {
-    margin: 2rem 0;
-
-    @include responsive(tablet) {
-        margin: 2rem 0;
-    }
-    
-    @include responsive(desktop) {
-        display: flex;
-        flex-direction: column;
-        margin: 4rem 0;
-    }
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    overflow: hidden;
 }
+
 .img-card {
     width: 100%;
     object-fit: cover;
     aspect-ratio: 10/10;
     filter: grayscale(100%);
     margin-bottom: 1rem;
-
-    &:hover {
-        filter: grayscale(0%);
-    }
+    transition: filter 0.2s ease;
 }
+
 .fit {
-    object-fit:fill;
+    object-fit: fill;
 }
 
 
