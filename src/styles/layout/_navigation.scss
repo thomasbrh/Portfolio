@@ -150,8 +150,8 @@ nav {
 }
 
 
-/* BackToTop */
-.back-to-top {
+/* BackToTop */ /* BackToSafe */
+.back-to-top, .back-to-safe {
     z-index: 1000;
     position: fixed;
     background-color: $color-white;
@@ -179,6 +179,15 @@ nav {
     }
 }
 
+/* BackToSafe */
+.back-to-safe {
+    top: 1rem;
+
+    .icon {
+        transform-origin: 0%;
+        transform: rotate(-90deg);
+    }
+}
 
 /* Devices */
 .desktop {

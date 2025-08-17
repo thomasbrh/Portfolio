@@ -210,3 +210,22 @@ cards.forEach((card, index) => {
 });
 }
 document.addEventListener("DOMContentLoaded", animateCards);
+
+
+// Animation de pulsation pour le bouton back-to-safe
+function animateBackToSafe() {
+    const backToSafeButton = document.querySelector('.back-to-safe');
+    
+    if (backToSafeButton) {
+        gsap.to(backToSafeButton, {
+            scale: 1.2,
+            duration: 1.5,
+            ease: "power2.inOut",
+            yoyo: true,
+            repeat: -1
+        });
+    }
+}
+
+// Initialiser l'animation du bouton back-to-safe
+document.addEventListener("DOMContentLoaded", animateBackToSafe);
