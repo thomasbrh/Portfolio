@@ -102,7 +102,7 @@ elements.forEach(el => {
 // Images 
 animateScrollSync(
     '.img-sections',
-    { x: -100, opacity: 0 },
+    { x: -75, opacity: 0 },
     { x: 0, opacity: 1, ease: "power3.out", duration: 0.8 }
 );
 
@@ -126,7 +126,7 @@ animateScrollSync(
 // Header
 gsap.from('.animHeader', {
     opacity: 0,
-    y: 400,
+    y: 600,
     duration: 1.0,
     ease: 'power3.out',
     delay: 0.2

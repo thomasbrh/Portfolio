@@ -1,13 +1,9 @@
 /* typographies */
-h1, h2, h3, h4, h5, h6, p {
-    margin: 0;
-}
-
 .title-header,
 .title-header-thin,
 .title-big,
 .title-big-thin,
-.title-medium, 
+.title-medium,
 .title-small,
 .title-section,
 .title-card,
@@ -15,50 +11,69 @@ h1, h2, h3, h4, h5, h6, p {
     color: $color-white;
     font-family: $font-primary;
     line-height: 1.2;
+
+    word-break: normal;
+    overflow-wrap: normal;
+    white-space: normal; 
+}
+
+.title-card,
+.text-card {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 
+.paragraph,
+.paragraph-bold,
+.paragraph-center {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    hyphens: auto;
+}
+
 /* titles */
-.title-header { @include font-size-responsive(60px, 137px, 216px); 
-    color: $color-white; 
+.title-header { @include font-size-responsive(60px, 137px, 216px);
+    color: $color-white;
     margin: 4rem 0 1rem 0;
 }
 .title-header-thin { font-weight: 100; }
 
-.title-big { @include font-size-responsive(37px, 91px, 125px); 
-    color: $color-primary; 
+.title-big { @include font-size-responsive(37px, 91px, 125px);
+    color: $color-primary;
     margin-bottom: 2rem;
 }
 .title-big-thin { 
-    font-weight: 100; 
-    color: $color-white; 
+    font-weight: 100;
+    color: $color-white;
 }
 
 .title-medium { @include font-size-responsive(54px, 61px, 71px); }
 
-.title-section { @include font-size-responsive(36px, 41px, 47px); 
-    margin-bottom: 2rem; 
-    text-transform: uppercase; 
+.title-section { @include font-size-responsive(36px, 41px, 47px);
+    margin-bottom: 2rem;
+    text-transform: uppercase;
 }
-.title-section-red { 
-    color: $color-primary; 
+.title-section-red {
+    color: $color-primary;
 }
-.title-section-thin { 
-    font-weight: 300; 
-    color: $color-primary; 
+.title-section-thin {
+    font-weight: 300;
+    color: $color-primary;
 }
 
-.title-card { @include font-size-responsive(28px, 24px, 48px); 
+.title-card { @include font-size-responsive(28px, 24px, 48px);
     text-transform: uppercase;
     text-decoration: none;
 }
 
 .text-card {
     @include font-size-responsive(14px, 18px, 24px);
-    font-family: $font-primary; 
+    font-family: $font-primary;
     color: $color-white;
 }
-.text-card-thin { 
+.text-card-thin {
     font-weight: 100;
 }
 

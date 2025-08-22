@@ -1,7 +1,7 @@
 // le script vient d'un ancient projet 
 document.addEventListener("DOMContentLoaded", () => {
 
-if (!window.location.pathname.includes("prux.html")) return; //j'ai rajouté ceci pour éviter une erreur console
+if (!window.location.pathname.includes("prux.html")) return;
 
 const images = 
     ['assets/images/prux-dev1.webp',
