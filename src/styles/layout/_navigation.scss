@@ -30,21 +30,31 @@ nav, .anchor-nav, .socials {
 
 /* navigation */
 nav {
-    left: 2rem;
-    margin: 1rem 0;
+    @include responsive(desktop) {
+        left: 2rem;
+        margin: 2rem 0;
+    }
 }
 
 .nav-mobile {
+    @media (max-width: 360px) {
+        bottom: 0.5rem;
+    }
+
     background-color: $color-white;
     border-radius: 2rem;
     position: fixed;
-    bottom: -0.5rem;
+    bottom: 1rem;
     left: 50%;
     transform: translate(-50%, -50%);
 }
 
 .page-mobile {
-    /* max-width: 3rem; */
+    @media (max-width: 360px) {
+        padding: 0.2rem;
+        height: auto;
+    }
+
     height: 3rem;
     padding: 0.5rem;
     display: flex;
@@ -52,6 +62,11 @@ nav {
     align-items: center;
     cursor: pointer;
     transition: all 0.1s ease;
+
+    @include responsive(tablet) {
+        padding: 1rem;
+    }
+
 
     svg {
         display: flex;
@@ -66,10 +81,12 @@ nav {
         transform: scale(1.05);
     }
 }
-.page-mobile:first-child {
-    padding-right: 0;
-}
+
 .page-mobile--active {
+    @media (max-width: 360px) {
+        padding: 0.1rem;
+    }
+    
     text-decoration: none;
     color: $color-primary;
     font-weight: 600;
@@ -113,14 +130,11 @@ nav {
     height: 3rem;
     align-items: center;
     bottom: 2rem;
-    
-    @include responsive(tablet-landscape) {
+
+    @include responsive(desktop) {
         display: flex;
-        justify-content: flex-end;
-        flex-direction: row;
-        gap: 2rem;
-        top: 1rem;
         right: 2rem;
+  
     }
 
     a.link {
@@ -199,6 +213,9 @@ nav {
 }
 
 .mobile {
+    @media (max-width: 360px) {
+        display: block;
+    }
     display: flex;
     @include responsive(desktop) { display: none; }
 }

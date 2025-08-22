@@ -15,6 +15,11 @@
     word-break: normal;
     overflow-wrap: normal;
     white-space: normal; 
+
+    @media (max-width: 360px) {
+        word-break: break-word;
+        overflow-wrap: break-word;
+    }
 }
 
 .title-card,
@@ -30,7 +35,6 @@
 .paragraph-center {
     word-break: break-word;
     overflow-wrap: break-word;
-    hyphens: auto;
 }
 
 /* titles */

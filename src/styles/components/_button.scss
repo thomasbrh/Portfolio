@@ -14,8 +14,8 @@
     border-radius: 100%;
     text-decoration: none;
 
-    @include responsive (tablet-landscape) {
-        top: calc(100dvh - 5rem);
+    @include responsive(desktop) {
         right: 2rem;
+        top: 2rem;
     }
 }

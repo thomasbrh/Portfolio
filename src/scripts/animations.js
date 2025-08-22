@@ -37,7 +37,7 @@ document.querySelectorAll(".img-sections").forEach((image) => {
     if (distanceToEnd > 0) {
     ScrollTrigger.create({
         trigger: section,
-        start: "top 10%",
+        start: "top 5%", // 10% dernière valeur fonctionnel
         end: "+=" + distanceToEnd,
         pin: image,
         pinSpacing: true,
@@ -89,8 +89,8 @@ elements.forEach(el => {
                 ...toVars,
                 scrollTrigger: {
                 trigger: el,
-                start: "top 80%",
-                end: "top 70%",
+                start: "top 75%",
+                end: "top 50%",
                 scrub: true,
                 }
             }
@@ -119,7 +119,7 @@ animateScrollSync(
 animateScrollSync(
     '.paragraph',
     { x: -200, opacity: 0 },
-    { x: 0, opacity: 1, ease: "power3.out", duration: 0.8 }
+    { x: 0, opacity: 1, ease: "power3.out", duration: 1.2 }
 );
 
 
